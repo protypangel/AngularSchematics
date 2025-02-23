@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "almuminune-angular-schematics-route",
+  "title": "My Schematic Options",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nom de la route à générer",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "dynamic": {
+      "type": "array",
+      "description": "Permet de générer une route dynamique",
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "path": {
+      "type": "string",
+      "description": "Si utilisé alors le nom du fichier prendra l'option name et path sera son chemin",
+      "default": ""
+    }
+  },
+  "required": ["name"]
+}
