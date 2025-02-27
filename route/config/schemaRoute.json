@@ -7,24 +7,32 @@
     "name": {
       "type": "string",
       "description": "Nom de la route à générer",
-      "$default": {
-        "$source": "argv",
-        "index": 0
-      }
-    },
-    "dynamic": {
-      "type": "array",
-      "description": "Permet de générer une route dynamique",
-      "default": [],
-      "items": {
-        "type": "string"
-      }
+      "default": ""
     },
     "path": {
       "type": "string",
-      "description": "Si utilisé alors le nom du fichier prendra l'option name et path sera son chemin",
+      "description": "Path du projet",
+      "default": ""
+    },
+    "project": {
+      "type": "string",
+      "description": "Nom du projet",
+      "default": ""
+    },
+    "dynamics": {
+      "type": "string",
+      "description": "Permet de générer une route dynamique",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "description": "Url de la route, si celle ci est vide alors le nom de la route sera name avant le premier anti slash",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
       "default": ""
     }
   },
-  "required": ["name"]
+  "required": ["url"]
 }

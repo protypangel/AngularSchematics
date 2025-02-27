@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json --watch",
-    "test": "npm run build && jasmine src/**/*_spec.js"
+    "test": "npx ts-node ./node_modules/jasmine/bin/jasmine"
   },
   "keywords": [
     "schematics"
@@ -16,11 +16,13 @@
   "dependencies": {
     "@angular-devkit/core": "^19.1.7",
     "@angular-devkit/schematics": "^19.1.7",
+    "@schematics/angular": "^19.1.8",
     "typescript": "~5.7.2"
   },
   "devDependencies": {
-    "@types/node": "^18.18.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine": "^5.0.0"
+    "@types/jasmine": "^5.1.7",
+    "jasmine": "^5.6.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "ts-node": "^10.9.2"
   }
 }
