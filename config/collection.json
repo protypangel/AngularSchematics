@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "route": {
+      "description": "Permit to create a route",
+      "factory": "../dist/index#Route",
+      "schema": "./SchemaRoute.json"
+    }
+  }
+}

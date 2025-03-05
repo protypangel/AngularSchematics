@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@src/*": ["src/*"],
+      "@config/*": ["config/*"],
+      "@dist/*": ["dist/*"],
+      "@spec/*": ["spec/*"],
+      "@Schema-Route/*": ["src/Route/*"]
+    },
+    "lib": ["es2020", "DOM"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+//    "noFallthroughCasesInSwitch": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "ES2020",
+    "strict": true,
+//    "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+  },
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "verbose": true,
+    "fileExtensions": {
+      "inputGlob": "{js,d.ts}",
+      "outputCheck": ["js", "d.ts", "js.map", "d.ts.map"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "tests/**/*",
+    "config/**/*",
+    "node_modules/@types/node/module.d.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
