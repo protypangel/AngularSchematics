@@ -1,5 +1,5 @@
 ---
-description: Project's structure
+description: Project's structure, generation files and schematics definitionD
 globs: *
 alwaysApply: true
 ---
@@ -32,3 +32,5 @@ alwaysApply: true
 
 # Infos supplémentaire
 - Chaque [SchematiqueName] doit avoir son propre paths dans le compilerOptions dans tsconfig.json, format : "@Schema-[SchematiqueName]/*": ["src/[SchematiqueName]/*"]
+- Le code doit respecter les convention KYD, c'est à dire : KISS, YAGNI & DRY
+- Ainsi qu'utiliser des design patternes et les principes solid !

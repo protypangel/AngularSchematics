@@ -22,6 +22,12 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
+    "declaration": true,
+    "declarationMap": true,
+    "skipLibCheck": true,
+    "plugins": [
+      { "transform": "@zerollup/ts-transform-paths" }
+    ]
   },
   "tsc-alias": {
     "resolveFullPaths": true,

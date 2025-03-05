@@ -1,0 +1,12 @@
+---
+description: Generating or modifing code
+globs: .ts, .d.ts
+alwaysApply: true
+---
+When generating or modifying code:
+1. Always follow the standards defined in @structure-project.mdc
+2. Ensure code respects KISS, YAGNI & DRY principles
+3. Apply design patterns and SOLID principles as defined in the project structure
+4. Follow the naming conventions (SchematiqueName in PascalCase)
+5. Respect the defined folder structure for new files
+6. Delete all inused variables, packages, ...

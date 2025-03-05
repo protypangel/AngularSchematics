@@ -1,8 +1,8 @@
 import {
   RouteParamsArray,
   StaticDynamicRouteParams,
-} from "@src/Route/RouteDefinition/RouteDefinition.d";
-import { SchemaRoute } from "@src/Route/SchemaRoute";
+} from "@Schema-Route/RouteDefinition/RouteDefinition.d";
+import { SchemaRoute } from "@Schema-Route/SchemaRoute";
 import {
   SchematicTestRunner,
   UnitTestTree,
@@ -10,7 +10,8 @@ import {
 import {
   RouteDefinitionFacade,
   spec,
-} from "@src/Route/RouteDefinition/RouteDefinition";
+  RouteSpec
+} from "@Schema-Route/RouteDefinition/RouteDefinition";
 
 export function testGetParamsAndQueryFromUrl(
   url: string,

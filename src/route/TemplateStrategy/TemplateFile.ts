@@ -3,7 +3,7 @@ import {
   DefaultDefinition,
   RouteSpecTsDefinition,
   RouteTSDefinition,
-} from "./TemplateFile";
+} from "./TemplateFile.d";
 
 export class Default implements DefaultDefinition {
   constructor(readonly folderName: string) {
@@ -17,8 +17,7 @@ export class RouteSpecTs extends Default implements RouteSpecTsDefinition {
   constructor(
       readonly folderName: string,
       readonly url: string,
-      readonly ImportInterface: string,
-      readonly Contents: string
+      readonly ImportInterface: string
   ) {
     super(folderName);
   }

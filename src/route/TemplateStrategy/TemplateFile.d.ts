@@ -1,13 +1,14 @@
-export interface RouteSpecTsDefinition {
-    readonly ImportInterface: string;
-    readonly Contents: string;
-    readonly url: string;
-}
-export interface RouteTSDefinition {
-    readonly ImportAndInterfaces: string;
-    readonly Contents: string;
-    readonly Implements: string;
-}
 export interface DefaultDefinition {
-    readonly folderName: string;
+    folderName: string;
+}
+
+export interface RouteSpecTsDefinition extends DefaultDefinition {
+    url: string;
+    ImportInterface: string;
+}
+
+export interface RouteTSDefinition extends DefaultDefinition {
+    ImportAndInterfaces: string;
+    Contents: string;
+    Implements: string;
 }

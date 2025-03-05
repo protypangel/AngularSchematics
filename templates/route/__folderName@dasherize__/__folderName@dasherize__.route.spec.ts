@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, withRouterConfig, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { <%= classify(folderName) %>Route<% ImportInterface %> } from './<%= dasherize(folderName) %>';
+import { <%= classify(folderName) %>Route<%= ImportInterface %> } from './<%= dasherize(folderName) %>';
 
 describe('<%= classify(folderName) %>Route', () => {
     beforeEach(async () => {

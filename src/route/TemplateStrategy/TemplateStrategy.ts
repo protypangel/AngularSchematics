@@ -1,4 +1,4 @@
-import { SchemaRoute } from "@src/Route/SchemaRoute";
+import { SchemaRoute } from "@Schema-Route/SchemaRoute";
 import { strings } from "@angular-devkit/core";
 import {
   Default,
@@ -6,7 +6,7 @@ import {
   ArrayRouteTemplate,
   TypeofRouteTemplate
 } from "./TemplateFile";
-import {TemplateFileFactory} from "./TemplateFileFactory";
+import {TemplateFileFactory} from "@src/Route/TemplateFactory/TemplateFactory";
 
 export class TemplateStrategy {
   private readonly templates: { [key: string]: RouteTemplate };

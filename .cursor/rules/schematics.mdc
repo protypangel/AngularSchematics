@@ -1,0 +1,5 @@
+---
+description: description of 
+globs: src/*, 
+alwaysApply: true
+---
