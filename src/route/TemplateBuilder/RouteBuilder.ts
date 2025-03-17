@@ -10,7 +10,7 @@ export interface InterfaceResult {
 export class Builder<T> {
   protected readonly folderName: string;
   constructor(protected readonly schema: SchemaRoute, protected readonly routeDefinition: RouteDefinition) {
-    this.folderName = schema.name ?? this.getFolderNameFromSchema(schema);
+    this.folderName = schema.name || this.getFolderNameFromSchema(schema);
   }
 
   protected generateStringTemplate(items: string[], template: (item: string) => string): string {

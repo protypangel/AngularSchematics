@@ -4,9 +4,8 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@src/*": ["src/*"],
-      "@config/*": ["config/*"],
       "@dist/*": ["dist/*"],
-      "@spec/*": ["spec/*"],
+      "@tests/*": ["tests/*"],
       "@Schema-Route/*": ["src/Route/*"]
     },
     "lib": ["es2020", "DOM"],
@@ -33,15 +32,15 @@
     "resolveFullPaths": true,
     "verbose": true,
     "fileExtensions": {
-      "inputGlob": "{js,d.ts}",
-      "outputCheck": ["js", "d.ts", "js.map", "d.ts.map"]
+      "inputGlob": "{js,d.ts,json}",
+      "outputCheck": ["js", "d.ts", "js.map", "d.ts.map", "json"]
     }
   },
   "include": [
+    "config/*.json",
     "src/**/*",
     "tests/**/*",
-    "config/**/*",
-    "node_modules/@types/node/module.d.ts"
+    "node_modules/@types/node/module.d.ts",
   ],
   "exclude": ["node_modules", "dist"]
 }

@@ -25,7 +25,7 @@ export function TemplateDecorator(option: Option) {
                 return option;
             }
             Template(): T {
-                return template;
+                return this as unknown as T;
             }
         }
         return Decorated as unknown as DecoratedConstructor<T>;
