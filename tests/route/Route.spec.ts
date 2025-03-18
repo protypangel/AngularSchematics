@@ -1,7 +1,7 @@
 import { RouteUtil } from "./Route.util";
 import * as fs from 'fs';
 import { diffChars } from "diff";
-import { SchemaRoute } from "@src/Route/SchemaRoute";
+import { SchemaRoute } from "@src/route/SchemaRoute";
 
 // Verifié que les fichiers sont créés
 describe("Path with no name argument", () => {
@@ -12,9 +12,8 @@ describe("Path with no name argument", () => {
                 url
             }).then(files => {
                 expect(files.length).toBe(extensions.length);
-                extensions.forEach(extension => {
-                    expect(files).toContain(`/route/${fileName}/${fileName}.route.${extension}`);
-                });
+                const haventFiles = RouteUtil.Files.haventFiles(`/route/${fileName}/${fileName}.route`, files);
+                expect(haventFiles).toEqual([]);
             });
         };
     }

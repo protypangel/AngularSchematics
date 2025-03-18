@@ -1,6 +1,6 @@
-import { RouteDefinition } from "@Schema-Route/RouteDefinition/RouteDefinition";
-import { SchemaRoute } from "@Schema-Route/SchemaRoute";
-import { DecoratedAdder } from "@Schema-Route/TemplateStrategy/TemplateDecorator";
+import { RouteDefinition } from "@src/route/RouteDefinition/RouteDefinition";
+import { SchemaRoute } from "@src/route/SchemaRoute";
+import { DecoratedAdder } from "@src/route/TemplateStrategy/TemplateDecorator";
 
 export interface InterfaceResult {
   Interfaces: string;

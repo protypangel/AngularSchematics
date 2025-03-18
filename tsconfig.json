@@ -4,16 +4,14 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@src/*": ["src/*"],
-      "@dist/*": ["dist/*"],
-      "@tests/*": ["tests/*"],
-      "@Schema-Route/*": ["src/Route/*"]
+      "@tests/*": ["tests/*"]
     },
     "lib": ["es2020", "DOM"],
     "module": "commonjs",
     "moduleResolution": "node",
 //    "noFallthroughCasesInSwitch": true,
     "rootDir": ".",
-    "outDir": "dist",
+    "outDir": "./dist",
     "sourceMap": true,
     "target": "ES2020",
     "strict": true,
@@ -39,8 +37,12 @@
   "include": [
     "config/*.json",
     "src/**/*",
-    "tests/**/*",
-    "node_modules/@types/node/module.d.ts",
+    "tests/**/*"
   ],
-  "exclude": ["node_modules", "dist", "tests/route/expect.file.spec"]
+  "exclude": [
+    "node_modules", 
+    "dist", 
+    "tests/route/expect.file.spec",
+    "templates/**/*"
+  ]
 }

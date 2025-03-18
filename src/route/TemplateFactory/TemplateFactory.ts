@@ -1,19 +1,19 @@
 import {
   DecoratedAdder,
   Option,
-} from "@Schema-Route/TemplateStrategy/TemplateDecorator";
+} from "@src/route/TemplateStrategy/TemplateDecorator";
 import {
   RouteSpecTs,
   RouteTemplate,
   RouteTS,
   TypeofRouteTemplate,
   Default,
-} from "@Schema-Route/TemplateStrategy/TemplateFile";
-import { SchemaRoute } from "@Schema-Route/SchemaRoute";
-import { RouteDefinition, RouteDefinitionFacade } from "@Schema-Route/RouteDefinition/RouteDefinition";
-import { RouteTSBuilder } from "@Schema-Route/TemplateBuilder/RouteTSBuilder";
-import { RouteSpecTsBuilder } from "@Schema-Route/TemplateBuilder/RouteSpecTsBuilder";
-import { Builder } from "@Schema-Route/TemplateBuilder/RouteBuilder";
+} from "@src/route/TemplateStrategy/TemplateFile";
+import { SchemaRoute } from "@src/route/SchemaRoute";
+import { RouteDefinition, RouteDefinitionFacade } from "@src/route/RouteDefinition/RouteDefinition";
+import { RouteTSBuilder } from "@src/route/TemplateBuilder/RouteTSBuilder";
+import { RouteSpecTsBuilder } from "@src/route/TemplateBuilder/RouteSpecTsBuilder";
+import { Builder } from "@src/route/TemplateBuilder/RouteBuilder";
 
 class DefaultTemplateBuilder extends Builder<Default> {
   private template: Default;
