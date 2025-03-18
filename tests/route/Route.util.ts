@@ -34,5 +34,5 @@ class RouteDefinition {
 export const RouteUtil = {
   Files,
   RouteDefinition,
-  RouteUtilBuilder,
+  RouteUtilBuilder
 }

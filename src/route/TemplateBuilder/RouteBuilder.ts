@@ -12,13 +12,14 @@ export class Builder<T> {
   constructor(protected readonly schema: SchemaRoute, protected readonly routeDefinition: RouteDefinition) {
     this.folderName = schema.name || this.getFolderNameFromSchema(schema);
   }
-
-  protected generateStringTemplate(items: string[], template: (item: string) => string): string {
-    return items.map(template).join("\n");
+  protected split_join(items: string[], end: string = "", start: string = "  "): string {
+    return items.map(item => `${start}${item}${end}`).join("\n");
   }
-
   private generateInterface(type: string, items: string[]): string {
-    return items.length ? `interface ${type} {\n${this.generateStringTemplate(items, (item: string) => `  ${item}: string;`)}\n}\n` : "";
+    if (items.length === 0) return "";
+    return `interface ${type} {\n` + 
+      this.split_join(items, ": string;") + 
+    "\n}\n";
   }
   protected generateInterfaces(): InterfaceResult {
     const Params = this.generateInterface("Params", this.routeDefinition.params);

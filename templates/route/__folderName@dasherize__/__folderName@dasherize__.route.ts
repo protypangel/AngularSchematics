@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ActivatedRoute} from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 <%= ImportAndInterfaces %>
 @Component({
   selector: "route-<%= dasherize(folderName) %>",
