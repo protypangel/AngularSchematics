@@ -1,6 +1,6 @@
 import { SchematicTestRunner } from "@angular-devkit/schematics/testing";
-import { RouteDefinitionFacade } from "@src/Route/RouteDefinition/RouteDefinition";
-import { SchemaRoute } from "@src/Route/SchemaRoute";
+import { RouteDefinitionFacade } from "@src/route/RouteDefinition/RouteDefinition";
+import { SchemaRoute } from "@src/route/SchemaRoute";
 import * as path from "path";
 
 async function RouteUtilBuilder (options: SchemaRoute) {

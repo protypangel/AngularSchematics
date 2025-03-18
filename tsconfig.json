@@ -5,8 +5,7 @@
     "paths": {
       "@src/*": ["src/*"],
       "@dist/*": ["dist/*"],
-      "@tests/*": ["tests/*"],
-      "@Schema-Route/*": ["src/Route/*"]
+      "@tests/*": ["tests/*"]
     },
     "lib": ["es2020", "DOM"],
     "module": "commonjs",

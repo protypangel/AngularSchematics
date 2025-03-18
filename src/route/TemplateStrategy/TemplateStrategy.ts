@@ -1,4 +1,4 @@
-import { SchemaRoute } from "@Schema-Route/SchemaRoute";
+import { SchemaRoute } from "@src/route/SchemaRoute";
 import { strings } from "@angular-devkit/core";
 import {
   Default,
@@ -7,8 +7,8 @@ import {
   TypeofRouteTemplate,
   RouteSpecTs,
   RouteTS
-} from "./TemplateFile";
-import {TemplateFileFactory} from "@src/Route/TemplateFactory/TemplateFactory";
+} from "@src/route/TemplateStrategy/TemplateFile";
+import {TemplateFileFactory} from "@src/route/TemplateFactory/TemplateFactory";
 
 type Template = RouteTemplate | Default;
 

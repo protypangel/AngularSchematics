@@ -11,8 +11,8 @@ import {
   chain,
   source
 } from "@angular-devkit/schematics";
-import { SchemaRoute } from "@src/Route/SchemaRoute";
-import { TemplateStrategy } from "@src/Route/TemplateStrategy/TemplateStrategy";
+import { SchemaRoute } from "@src/route/SchemaRoute";
+import { TemplateStrategy } from "@src/route/TemplateStrategy/TemplateStrategy";
 import { Observable } from "rxjs";
 
 export function route(options: SchemaRoute): Rule {

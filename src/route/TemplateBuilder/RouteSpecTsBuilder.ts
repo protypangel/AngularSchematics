@@ -1,7 +1,7 @@
-import { RouteDefinition } from "@Schema-Route/RouteDefinition/RouteDefinition";
-import { SchemaRoute } from "@Schema-Route/SchemaRoute";
-import { DecoratedAdder } from "@Schema-Route/TemplateStrategy/TemplateDecorator";
-import { RouteSpecTs } from "@Schema-Route/TemplateStrategy/TemplateFile";
+import { RouteDefinition } from "@src/route/RouteDefinition/RouteDefinition";
+import { SchemaRoute } from "@src/route/SchemaRoute";
+import { DecoratedAdder } from "@src/route/TemplateStrategy/TemplateDecorator";
+import { RouteSpecTs } from "@src/route/TemplateStrategy/TemplateFile";
 import { Builder } from "./RouteBuilder";
 
 export class RouteSpecTsBuilder extends Builder<RouteSpecTs> {
