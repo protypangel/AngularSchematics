@@ -4,6 +4,7 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@src/*": ["src/*"],
+      "@dist/*": ["dist/*"],
       "@tests/*": ["tests/*"]
     },
     "lib": ["es2020", "DOM"],
