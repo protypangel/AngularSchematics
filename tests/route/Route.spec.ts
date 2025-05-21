@@ -40,15 +40,16 @@ describe("Path with name argument", () => {
                 url,
                 name
             }).then(files => {
-                extensions.forEach(extension => {
-                    expect(files).toContain(`/route/${excptedFileName}/${excptedFileName}.route.${extension}`);
-                });
+                expect(files.length).toBe(extensions.length);
+                const haventFiles = RouteUtil.Files.haventFiles(`/route/${excptedFileName}/${excptedFileName}.route`, files);
+                expect(haventFiles).toEqual([]);
             });
         };
     }
     it("Path with name argument", hasAllFiles("/first", "second", "second"));
     it("Path with name argument and dasherize", hasAllFiles("/FirstSecond", "ThirdFourth", "third-fourth"));
     it("Dasherized path with two dashes and two dynamic params and two query params", hasAllFiles("/first-second/custom-route/:param/:param2?param=value&param2=value2", "third-fourth", "third-fourth"));
+    it("Name with dash", hasAllFiles("/first-second/third-fourth", "five-six/Seven-Eight", "five-six/seven-eight"));
 })
 // Vérifier le contenue des fichiers
 describe("Content of the files", () => {

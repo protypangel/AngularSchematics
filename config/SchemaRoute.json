@@ -14,11 +14,6 @@
       "description": "Path du projet",
       "default": ""
     },
-    "project": {
-      "type": "string",
-      "description": "Nom du projet",
-      "default": ""
-    },
     "dynamics": {
       "type": "string",
       "description": "Permet de générer une route dynamique",

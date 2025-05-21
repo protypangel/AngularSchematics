@@ -1,12 +1,13 @@
 {
   "name": "@protypangel/schematics",
   "version": "0.0.0",
-  "schematics": "./config/collection.json",
+  "schematics": "./dist/config/collection.json",
   "description": "A blank schematics",
   "scripts": {
+    "link": "npm run build --silent && npm link",
     "build": "npm run copy --silent && tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
     "test": "npm run build --silent && npx ts-node -r tsconfig-paths/register ./node_modules/jasmine/bin/jasmine --config=jasmine/support/jasmine.json",
-    "copy": "npm run copy-templates  && npm run copy-expect-test-files",
+    "copy": "npm run copy-templates && npm run copy-expect-test-files",
     "copy-templates": "xcopy /E /I /Y /Q templates dist\\templates",
     "copy-expect-test-files": "xcopy /E /I /Y /Q tests\\route\\expect.file.spec dist\\tests\\route\\expect.file.spec"
   },
@@ -30,5 +31,13 @@
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.11",
     "tsconfig-paths": "^4.2.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "your-command": "./dist/index.js"
   }
 }
